@@ -12,9 +12,7 @@ class BottomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         padding: EdgeInsets.only(
-            left: kDefaultPadding * 2,
-            right: kDefaultPadding * 2,
-            bottom: kDefaultPadding / 3),
+            left: qPadding * 2, right: qPadding * 2, bottom: qPadding / 3),
         height: 60,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

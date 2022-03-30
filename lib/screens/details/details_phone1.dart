@@ -11,7 +11,7 @@ class DetailsPhone1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kPrimaryColor,
+        backgroundColor: qPrimaryColor,
       ),
       bottomNavigationBar: DetailsBottom(),
       body: SingleChildScrollView(
@@ -20,7 +20,7 @@ class DetailsPhone1 extends StatelessWidget {
             DetailBody(
               image: 'assets/images/samsungphone.jpg',
               title: "Samsung Galaxy 22\n",
-              country: "Samsung",
+              marka: "Samsung",
               price: 13000,
             ),
             DetailPhone(

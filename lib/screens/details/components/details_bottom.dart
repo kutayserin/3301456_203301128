@@ -5,20 +5,20 @@ class DetailsBottom extends StatelessWidget {
   const DetailsBottom({
     Key? key,
   }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Row(
       children: <Widget>[
-        SizedBox(
-          width: 200,
-          height: 80,
+        Container(
+          width: size.width / 2,
+          height: size.height / 10,
           child: TextButton(
             style: TextButton.styleFrom(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(topRight: Radius.circular(20)),
               ),
-              backgroundColor: kPrimaryColor,
+              backgroundColor: qPrimaryColor,
             ),
             onPressed: () {},
             child: Text(

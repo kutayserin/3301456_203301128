@@ -1,4 +1,3 @@
-
 import 'package:app1/constants.dart';
 import 'package:app1/screens/details/components/details_body.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +11,7 @@ class Detailstv3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kPrimaryColor,
+        backgroundColor: qPrimaryColor,
       ),
       bottomNavigationBar: DetailsBottom(),
       body: SingleChildScrollView(
@@ -21,7 +20,7 @@ class Detailstv3 extends StatelessWidget {
             DetailBody(
               image: "assets/images/vesteltv.jpg",
               title: "Vestel 43F9510\n",
-              country: "Vestel",
+              marka: "Vestel",
               price: 4946,
             ),
             DetailTv(

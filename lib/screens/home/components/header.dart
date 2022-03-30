@@ -9,18 +9,18 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.only(bottom: kDefaultPadding * 2.5),
+        margin: EdgeInsets.only(bottom: qPadding * 2.5),
         height: 140,
         child: Stack(
           children: <Widget>[
             Container(
               padding: EdgeInsets.only(
-                left: kDefaultPadding,
-                right: kDefaultPadding,
-                bottom: 36 + kDefaultPadding,
+                left: qPadding,
+                right: qPadding,
+                bottom: 36 + qPadding,
               ),
               decoration: BoxDecoration(
-                  color: kPrimaryColor,
+                  color: qPrimaryColor,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(36),
                     bottomRight: Radius.circular(36),

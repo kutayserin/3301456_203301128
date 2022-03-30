@@ -1,4 +1,3 @@
-import 'package:app1/components/bottom_nav_bar.dart';
 import 'package:app1/constants.dart';
 import 'package:app1/screens/details/components/details_body.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +11,7 @@ class DetailsScreen1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kPrimaryColor,
+        backgroundColor: qPrimaryColor,
       ),
       bottomNavigationBar: DetailsBottom(),
       body: SingleChildScrollView(
@@ -21,7 +20,7 @@ class DetailsScreen1 extends StatelessWidget {
             DetailBody(
               image: 'assets/images/lenovo1.jpg',
               title: "IdeaPad 3\n",
-              country: "Lenovo",
+              marka: "Lenovo",
               price: 14000,
             ),
             DetailLaptop(

@@ -74,17 +74,15 @@ class SmartTvCard extends StatelessWidget {
       onTap: press,
       child: Container(
         margin: EdgeInsets.only(
-            left: kDefaultPadding,
-            top: kDefaultPadding / 2,
-            bottom: kDefaultPadding * 2.5),
+            left: qPadding, top: qPadding / 2, bottom: qPadding * 2.5),
         width: size.width * 0.8,
         child: Column(
           children: <Widget>[
             Image.asset(image),
             Container(
-              padding: EdgeInsets.all(kDefaultPadding / 2),
+              padding: EdgeInsets.all(qPadding / 2),
               decoration: BoxDecoration(
-                color: kBackgroundColor.withOpacity(0.2),
+                color: qBackGroundColor.withOpacity(0.2),
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(10),
                   bottomRight: Radius.circular(10),
@@ -102,12 +100,12 @@ class SmartTvCard extends StatelessWidget {
                     TextSpan(
                         text: "$marka".toUpperCase(),
                         style: TextStyle(
-                          color: kPrimaryColor,
+                          color: qPrimaryColor,
                         ))
                   ]),
                 ),
                 Spacer(),
-                Text('${price} TL', style: TextStyle(color: kPrimaryColor))
+                Text('${price} TL', style: TextStyle(color: qPrimaryColor))
               ]),
             ),
           ],

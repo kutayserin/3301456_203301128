@@ -7,13 +7,13 @@ class DetailBody extends StatelessWidget {
       {Key? key,
       required this.image,
       required this.title,
-      required this.country,
+      required this.marka,
       required this.price})
       : super(key: key);
 
   final String image;
   final String title;
-  final String country;
+  final String marka;
   final int price;
 
   @override
@@ -23,7 +23,7 @@ class DetailBody extends StatelessWidget {
       child: Column(children: <Widget>[
         TitleAndPrice(
           title: title,
-          country: country,
+          country: marka,
           price: price,
         ),
         ImageAndIconsCard(

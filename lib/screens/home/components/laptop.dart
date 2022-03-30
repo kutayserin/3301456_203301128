@@ -1,7 +1,4 @@
 import 'package:app1/constants.dart';
-import 'package:app1/screens/details/details_phone1.dart';
-import 'package:app1/screens/details/details_phone2.dart';
-import 'package:app1/screens/details/details_phone3.dart';
 import 'package:app1/screens/details/details_screen1.dart';
 import 'package:app1/screens/details/details_screen2.dart';
 import 'package:app1/screens/details/details_screen3.dart';
@@ -81,9 +78,7 @@ class LaptopCard extends StatelessWidget {
       onTap: press,
       child: Container(
         margin: EdgeInsets.only(
-            left: kDefaultPadding,
-            top: kDefaultPadding / 2,
-            bottom: kDefaultPadding * 2.5),
+            left: qPadding, top: qPadding / 2, bottom: qPadding * 2.5),
         width: size.width * 0.6,
         child: Column(
           children: <Widget>[
@@ -91,9 +86,9 @@ class LaptopCard extends StatelessWidget {
               image,
             ),
             Container(
-              padding: EdgeInsets.all(kDefaultPadding / 2),
+              padding: EdgeInsets.all(qPadding / 2),
               decoration: BoxDecoration(
-                color: kBackgroundColor.withOpacity(0.2),
+                color: qBackGroundColor.withOpacity(0.2),
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(10),
                   bottomRight: Radius.circular(10),
@@ -111,12 +106,12 @@ class LaptopCard extends StatelessWidget {
                     TextSpan(
                         text: "$country".toUpperCase(),
                         style: TextStyle(
-                          color: kPrimaryColor,
+                          color: qPrimaryColor,
                         ))
                   ]),
                 ),
                 Spacer(),
-                Text('${price} TL', style: TextStyle(color: kPrimaryColor))
+                Text('${price} TL', style: TextStyle(color: qPrimaryColor))
               ]),
             ),
           ],

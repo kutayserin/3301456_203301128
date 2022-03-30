@@ -1,5 +1,3 @@
-// ignore_for_file: deprecated_member_
-
 import 'package:app1/screens/home/components/smart_phone.dart';
 import 'package:flutter/material.dart';
 import 'smart_tv.dart';

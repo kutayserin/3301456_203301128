@@ -16,7 +16,7 @@ class TitleAndPrice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+      padding: const EdgeInsets.symmetric(horizontal: qPadding),
       child: Row(
         children: <Widget>[
           RichText(
@@ -32,14 +32,14 @@ class TitleAndPrice extends StatelessWidget {
                 text: country,
                 style: TextStyle(
                   fontSize: 30,
-                  color: kPrimaryColor,
+                  color: qPrimaryColor,
                   fontWeight: FontWeight.w300,
                 ))
           ])),
           Spacer(),
           Text(
             "${price} TL",
-            style: TextStyle(color: kPrimaryColor, fontSize: 24),
+            style: TextStyle(color: qPrimaryColor, fontSize: 24),
           )
         ],
       ),

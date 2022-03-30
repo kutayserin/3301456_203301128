@@ -23,7 +23,7 @@ class ImageAndIconsCard extends StatelessWidget {
             decoration: BoxDecoration(
                 image: DecorationImage(
                     alignment: Alignment.center,
-                    fit: BoxFit.fill,
+                    fit: BoxFit.fitHeight,
                     image: AssetImage(image))),
           ),
         ],

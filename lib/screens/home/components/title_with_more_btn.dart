@@ -14,22 +14,23 @@ class TitleWithMoreBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+      padding: const EdgeInsets.symmetric(horizontal: qPadding),
       child: Row(
         children: <Widget>[
           TitleWithCustomUnderLine(text: title),
           Spacer(),
-          FlatButton(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            color: kPrimaryColor,
-            onPressed: press,
-            child: Text(
-              "Daha Fazla",
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
+          TextButton(
+              style: TextButton.styleFrom(
+                backgroundColor: qPrimaryColor,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+              onPressed: press,
+              child: Text(
+                "Daha Fazla",
+                style: TextStyle(color: Colors.white),
+              )),
         ],
       ),
     );
@@ -51,7 +52,7 @@ class TitleWithCustomUnderLine extends StatelessWidget {
         child: Text(text,
             style: TextStyle(
                 decoration: TextDecoration.underline,
-                decorationColor: kPrimaryColor,
+                decorationColor: qPrimaryColor,
                 color: Colors.black,
                 fontSize: 20,
                 fontWeight: FontWeight.w600)));
