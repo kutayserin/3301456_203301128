@@ -29,7 +29,10 @@ class _LoginDemoState extends State<LoginDemo> {
     final snackBar =
         SnackBar(content: const Text('Hatalı kullanıcı adı ya da şifre'));
 
-    var data = ["admin", "123"];
+    List<String> data = [
+      "admin",
+      "123",
+    ];
     data.add(nameSur);
     data.add(password);
     if ((data[0] == nameSur) && (data[1] == password)) {
