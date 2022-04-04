@@ -18,10 +18,7 @@ class BottomNavBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             IconButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomeScreen()));
-                },
+                onPressed: () {},
                 icon: Image.asset("assets/icons/home_button.jpg")),
             IconButton(
                 onPressed: () {},

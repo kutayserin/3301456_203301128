@@ -1,8 +1,7 @@
-import 'package:app1/components/bottom_nav_bar.dart';
-
 import 'package:app1/constants.dart';
 import 'package:app1/screens/details/components/details_body.dart';
 import 'package:flutter/material.dart';
+import 'components/phone_details.dart';
 import 'components/details_bottom.dart';
 
 class DetailsPhone2 extends StatelessWidget {
@@ -21,7 +20,7 @@ class DetailsPhone2 extends StatelessWidget {
             DetailBody(
               image: 'assets/images/iphone.jpg',
               title: "Iphone 12\n",
-              marka: "Apple",
+              brand: "Apple",
               price: 15000,
             ),
             DetailPhone(

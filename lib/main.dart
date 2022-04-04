@@ -7,6 +7,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -98,9 +100,7 @@ class _LoginDemoState extends State<LoginDemo> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(
-                  left: 15.0, right: 15.0, top: 15, bottom: 0),
-              //padding: EdgeInsets.symmetric(horizontal: 15),
+              padding: const EdgeInsets.only(left: 15.0, right: 15.0, top: 15),
               child: TextField(
                 onChanged: (text) {
                   _passwordSave(text);

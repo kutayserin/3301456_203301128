@@ -2,6 +2,7 @@ import 'package:app1/constants.dart';
 import 'package:app1/screens/details/components/details_body.dart';
 import 'package:flutter/material.dart';
 
+import 'components/phone_details.dart';
 import 'components/details_bottom.dart';
 
 class DetailsPhone3 extends StatelessWidget {
@@ -20,7 +21,7 @@ class DetailsPhone3 extends StatelessWidget {
             DetailBody(
               image: 'assets/images/redmi.jpg',
               title: "Redmi Note 10 Pro\n",
-              marka: "Xiaomi",
+              brand: "Xiaomi",
               price: 6000,
             ),
             DetailPhone(

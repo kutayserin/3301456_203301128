@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'body.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../components/bottom_nav_bar.dart';
+import '../../details/components/bottom_nav_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   @override

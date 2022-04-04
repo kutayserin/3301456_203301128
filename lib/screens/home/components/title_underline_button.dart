@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:app1/constants.dart';
 
-class TitleWithMoreBtn extends StatelessWidget {
-  const TitleWithMoreBtn({
+class TitleWithCustomBtn extends StatelessWidget {
+  const TitleWithCustomBtn({
     Key? key,
     required this.title,
     required this.press,

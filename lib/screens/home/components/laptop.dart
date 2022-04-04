@@ -1,7 +1,7 @@
-import 'package:app1/constants.dart';
 import 'package:app1/screens/details/details_screen1.dart';
 import 'package:app1/screens/details/details_screen2.dart';
 import 'package:app1/screens/details/details_screen3.dart';
+import 'package:app1/screens/home/components/product_card.dart';
 import 'package:flutter/material.dart';
 
 class Laptops extends StatelessWidget {
@@ -15,10 +15,10 @@ class Laptops extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          LaptopCard(
+          ProductCard(
             image: "assets/images/lenovo1.jpg",
             title: "Lenovo IdeaPad 3",
-            country: "Lenovo",
+            brand: "Lenovo",
             price: 14000,
             press: () {
               Navigator.push(
@@ -27,10 +27,10 @@ class Laptops extends StatelessWidget {
                       builder: (context) => const DetailsScreen1()));
             },
           ),
-          LaptopCard(
+          ProductCard(
             image: "assets/images/msi1.jpg",
             title: "MSI Katana",
-            country: "MSI",
+            brand: "MSI",
             price: 17000,
             press: () {
               Navigator.push(
@@ -39,10 +39,10 @@ class Laptops extends StatelessWidget {
                       builder: (context) => const DetailsScreen2()));
             },
           ),
-          LaptopCard(
+          ProductCard(
             image: "assets/images/casper1.jpg",
             title: "Casper Excalibur",
-            country: "Casper",
+            brand: "Casper",
             price: 14750,
             press: () {
               Navigator.push(
@@ -52,70 +52,6 @@ class Laptops extends StatelessWidget {
             },
           ),
         ],
-      ),
-    );
-  }
-}
-
-class LaptopCard extends StatelessWidget {
-  const LaptopCard({
-    Key? key,
-    required this.image,
-    required this.title,
-    required this.country,
-    required this.press,
-    required this.price,
-  }) : super(key: key);
-
-  final String image, title, country;
-  final int price;
-  final VoidCallback press;
-
-  @override
-  Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return GestureDetector(
-      onTap: press,
-      child: Container(
-        margin: EdgeInsets.only(
-            left: qPadding, top: qPadding / 2, bottom: qPadding * 2.5),
-        width: size.width * 0.6,
-        child: Column(
-          children: <Widget>[
-            Image.asset(
-              image,
-            ),
-            Container(
-              padding: EdgeInsets.all(qPadding / 2),
-              decoration: BoxDecoration(
-                color: qBackGroundColor.withOpacity(0.2),
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(10),
-                  bottomRight: Radius.circular(10),
-                ),
-              ),
-              child: Row(children: <Widget>[
-                RichText(
-                  text: TextSpan(children: [
-                    TextSpan(
-                      text: "$title\n",
-                      style: TextStyle(
-                        color: Colors.black,
-                      ),
-                    ),
-                    TextSpan(
-                        text: "$country".toUpperCase(),
-                        style: TextStyle(
-                          color: qPrimaryColor,
-                        ))
-                  ]),
-                ),
-                Spacer(),
-                Text('${price} TL', style: TextStyle(color: qPrimaryColor))
-              ]),
-            ),
-          ],
-        ),
       ),
     );
   }

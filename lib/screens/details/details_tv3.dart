@@ -3,6 +3,7 @@ import 'package:app1/screens/details/components/details_body.dart';
 import 'package:flutter/material.dart';
 
 import 'components/details_bottom.dart';
+import 'components/tv_details.dart';
 
 class Detailstv3 extends StatelessWidget {
   const Detailstv3({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class Detailstv3 extends StatelessWidget {
             DetailBody(
               image: "assets/images/vesteltv.jpg",
               title: "Vestel 43F9510\n",
-              marka: "Vestel",
+              brand: "Vestel",
               price: 4946,
             ),
             DetailTv(

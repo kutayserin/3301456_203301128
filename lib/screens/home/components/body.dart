@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'smart_tv.dart';
 import 'header.dart';
 import 'laptop.dart';
-import 'title_with_more_btn.dart';
+import 'title_underline_button.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -14,14 +14,11 @@ class Body extends StatelessWidget {
         child: Column(
       children: <Widget>[
         Header(),
-        TitleWithMoreBtn(title: "Akıllı Telefon", press: () {}),
+        TitleWithCustomBtn(title: "Akıllı Telefon", press: () {}),
         SmartPhones(),
-        TitleWithMoreBtn(title: "Laptop", press: () {}),
+        TitleWithCustomBtn(title: "Laptop", press: () {}),
         Laptops(),
-        TitleWithMoreBtn(
-          title: "Akıllı TV",
-          press: () {},
-        ),
+        TitleWithCustomBtn(title: "Akıllı TV", press: () {}),
         SmartTvs(),
       ],
     ));
