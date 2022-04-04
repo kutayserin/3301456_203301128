@@ -28,11 +28,24 @@ class DetailsBottom extends StatelessWidget {
           ),
         ),
         Expanded(
+          child: Container(
+            width: size.width / 2,
+            height: size.height / 10,
             child: TextButton(
-          onPressed: () {},
-          child: Text("Sepete Ekle",
-              style: TextStyle(color: Colors.black, fontSize: 20)),
-        ))
+              style: TextButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius:
+                        BorderRadius.only(topLeft: Radius.circular(20)),
+                  ),
+                  backgroundColor: Colors.white12),
+              onPressed: () {},
+              child: Text(
+                "Sepete Ekle",
+                style: TextStyle(color: Colors.black, fontSize: 20),
+              ),
+            ),
+          ),
+        )
       ],
     );
   }

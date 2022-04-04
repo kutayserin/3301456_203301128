@@ -3,6 +3,7 @@ import 'package:app1/screens/details/components/details_body.dart';
 import 'package:flutter/material.dart';
 
 import 'components/details_bottom.dart';
+import 'components/tv_details.dart';
 
 class Detailstv1 extends StatelessWidget {
   const Detailstv1({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class Detailstv1 extends StatelessWidget {
             DetailBody(
               image: "assets/images/samsungtv.jpg",
               title: "Samsung 55Q70A\n",
-              marka: "Samsung",
+              brand: "Samsung",
               price: 13600,
             ),
             DetailTv(

@@ -3,6 +3,7 @@ import 'package:app1/screens/details/components/details_body.dart';
 import 'package:flutter/material.dart';
 
 import 'components/details_bottom.dart';
+import 'components/tv_details.dart';
 
 class Detailstv2 extends StatelessWidget {
   const Detailstv2({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class Detailstv2 extends StatelessWidget {
             DetailBody(
               image: "assets/images/lgtv.jpg",
               title: "LG OLED55B16LA\n",
-              marka: "LG",
+              brand: "LG",
               price: 15998,
             ),
             DetailTv(

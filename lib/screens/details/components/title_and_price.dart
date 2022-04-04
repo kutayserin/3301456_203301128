@@ -1,16 +1,15 @@
 import 'package:app1/constants.dart';
-import 'package:app1/constants.dart';
 import 'package:flutter/material.dart';
 
 class TitleAndPrice extends StatelessWidget {
   const TitleAndPrice({
     Key? key,
     required this.title,
-    required this.country,
+    required this.brand,
     required this.price,
   }) : super(key: key);
 
-  final String title, country;
+  final String title, brand;
   final int price;
 
   @override
@@ -29,7 +28,7 @@ class TitleAndPrice extends StatelessWidget {
                   fontSize: 24),
             ),
             TextSpan(
-                text: country,
+                text: brand,
                 style: TextStyle(
                   fontSize: 30,
                   color: qPrimaryColor,

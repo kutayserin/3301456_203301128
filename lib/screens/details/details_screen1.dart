@@ -3,6 +3,7 @@ import 'package:app1/screens/details/components/details_body.dart';
 import 'package:flutter/material.dart';
 
 import 'components/details_bottom.dart';
+import 'components/laptop_details.dart';
 
 class DetailsScreen1 extends StatelessWidget {
   const DetailsScreen1({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class DetailsScreen1 extends StatelessWidget {
             DetailBody(
               image: 'assets/images/lenovo1.jpg',
               title: "IdeaPad 3\n",
-              marka: "Lenovo",
+              brand: "Lenovo",
               price: 14000,
             ),
             DetailLaptop(
