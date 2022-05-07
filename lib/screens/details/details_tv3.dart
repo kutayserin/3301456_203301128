@@ -2,6 +2,7 @@ import 'package:app1/constants.dart';
 import 'package:app1/screens/details/components/details_body.dart';
 import 'package:flutter/material.dart';
 
+import '../../top_right_icon.dart';
 import 'components/details_bottom.dart';
 import 'components/tv_details.dart';
 
@@ -13,6 +14,7 @@ class Detailstv3 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: qPrimaryColor,
+        actions: [TopRightIcon()],
       ),
       bottomNavigationBar: DetailsBottom(),
       body: SingleChildScrollView(

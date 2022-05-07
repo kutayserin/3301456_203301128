@@ -18,19 +18,6 @@ class TitleWithCustomBtn extends StatelessWidget {
       child: Row(
         children: <Widget>[
           TitleWithCustomUnderLine(text: title),
-          Spacer(),
-          TextButton(
-              style: TextButton.styleFrom(
-                backgroundColor: qPrimaryColor,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-              ),
-              onPressed: press,
-              child: Text(
-                "Daha Fazla",
-                style: TextStyle(color: Colors.white),
-              )),
         ],
       ),
     );

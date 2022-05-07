@@ -1,10 +1,16 @@
 import 'package:app1/constants.dart';
+import 'package:app1/screens/details/cart/product_model.dart';
+import 'package:app1/screens/details/cart/screens/product_screen.dart';
+import 'package:app1/screens/details/cart/shoppin_list.dart';
 import 'package:flutter/material.dart';
 
+import '../../../image.dart';
+
 class DetailsBottom extends StatelessWidget {
-  const DetailsBottom({
+  DetailsBottom({
     Key? key,
   }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

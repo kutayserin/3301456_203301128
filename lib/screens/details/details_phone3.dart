@@ -1,7 +1,9 @@
 import 'package:app1/constants.dart';
 import 'package:app1/screens/details/components/details_body.dart';
+import 'package:app1/screens/home/components/home_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../../top_right_icon.dart';
 import 'components/phone_details.dart';
 import 'components/details_bottom.dart';
 
@@ -13,6 +15,7 @@ class DetailsPhone3 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: qPrimaryColor,
+        actions: [TopRightIcon()],
       ),
       bottomNavigationBar: DetailsBottom(),
       body: SingleChildScrollView(
