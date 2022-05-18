@@ -1,6 +1,8 @@
 import 'package:app1/constants.dart';
 import 'package:app1/screens/home/components/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:app1/generated_plugin_registrant.dart';
 
 void main() {
   runApp(MyApp());
