@@ -19,7 +19,7 @@ class _ShoppingListState extends State<ShoppingList> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 2,
       child: Scaffold(
         appBar: AppBar(
           title: Text("Alışveriş Listesi"),
@@ -29,9 +29,6 @@ class _ShoppingListState extends State<ShoppingList> {
             tabs: <Widget>[
               Tab(
                 text: "Tüm Ürünler",
-              ),
-              Tab(
-                text: "test",
               ),
               Tab(
                 text: "Ödeme",
@@ -50,7 +47,7 @@ class _ShoppingListState extends State<ShoppingList> {
                 });
               });
             }),
-            test(),
+            //test(),
             CheckoutScreen(cart, sum, (deleteProduct) {
               setState(() {
                 for (var i = 0; i < cart.length; i++) {

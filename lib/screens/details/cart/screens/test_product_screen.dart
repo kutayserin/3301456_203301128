@@ -1,3 +1,4 @@
+/*
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
@@ -109,4 +110,4 @@ Future<List<Product>> ReadJsonData() async {
       await rootBundle.rootBundle.loadString('jsonfile/products.json');
   final list = json.decode(jsonData) as List<dynamic>;
   return list.map((e) => Product.fromJson(e)).toList();
-}
+}*/

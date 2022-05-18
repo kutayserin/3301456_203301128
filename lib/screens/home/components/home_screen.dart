@@ -1,5 +1,6 @@
 import 'package:app1/constants.dart';
 import 'package:app1/screens/details/cart/shoppin_list.dart';
+import 'package:app1/screens/home/components/test_screen.dart';
 import 'package:app1/top_right_icon.dart';
 import 'package:flutter/material.dart';
 import 'body.dart';
@@ -16,9 +17,14 @@ class HomeScreen extends StatelessWidget {
         elevation: 0,
         leading: IconButton(
           icon: SvgPicture.asset("assets/icons/menu.svg"),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => TestScreen()));
+          },
         ),
-        actions: [TopRightIcon()],
+        actions: [
+          TopRightIcon(),
+        ],
       ),
       body: Body(),
       bottomNavigationBar: BottomNavBar(),

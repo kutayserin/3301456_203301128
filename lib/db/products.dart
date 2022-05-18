@@ -1,4 +1,4 @@
-import 'package:app1/model/product_model.dart';
+/*import 'package:app1/model/product_model.dart';
 import 'package:app1/screens/home/components/laptop.dart';
 import 'package:sqflite/sqflite.dart';
 import 'dart:core';
@@ -27,67 +27,10 @@ class ProductsDatabase {
   }
 
   Future _createDB(Database db, int version) async {
-    final categoryIdType = 'INTEGER PRIMARY KEY AUTOINCREMENT';
-    final textType = 'TEXT NOT NULL';
-    final priceType = 'INTEGER NOT NULL';
 
-    await db.execute('''CREATE TABLE $tableProducts(
-      ${ProductFields.categoryId} $categoryIdType,
-      ${ProductFields.name} $textType,
-      ${ProductFields.subCategories} $textType,
-    )''');
-    await db.execute('''
- CREATE TABLE $tablePhones(
-   ${SubCategoryFields.id}  $categoryIdType,
-   ${SubCategoryFields.image} $textType,
-   ${SubCategoryFields.title} $textType,
-   ${SubCategoryFields.brand} $textType,
-   ${SubCategoryFields.description} $textType,
-   ${SubCategoryFields.ekranboyutu} $textType,
-   ${SubCategoryFields.hafiza} $textType,
-   ${SubCategoryFields.garanti} $textType,
-   ${SubCategoryFields.kamera} $textType,
-   ${SubCategoryFields.pil} $textType,
-   ${SubCategoryFields.price} $priceType,
-   ${SubCategoryFields.ram} $textType,
- )
-''');
-    await db.execute('''
-CREATE TABLE $tableLaptops(
-   ${SubCategoryFields.id}  $categoryIdType,
-   ${SubCategoryFields.image} $textType,
-   ${SubCategoryFields.title} $textType,
-   ${SubCategoryFields.brand} $textType,
-      ${SubCategoryFields.price} $priceType,
-
-   ${SubCategoryFields.description} $textType,
-   ${SubCategoryFields.islemci} $textType,  
-      ${SubCategoryFields.ekranboyutu} $textType,
-
-   ${SubCategoryFields.ekrankarti} $textType,
-   ${SubCategoryFields.hafiza} $textType,
-   ${SubCategoryFields.garanti} $textType,
-)
-''');
-    await db.execute('''
-CREATE TABLE $tableTvs(
-  ${SubCategoryFields.id}  $categoryIdType,
-   ${SubCategoryFields.image} $textType,
-   ${SubCategoryFields.title} $textType,
-   ${SubCategoryFields.brand} $textType,
-      ${SubCategoryFields.price} $priceType,
-   ${SubCategoryFields.description} $textType,
-
-    ${SubCategoryFields.uydualici} $textType,
-    ${SubCategoryFields.cozunurluk} $textType,
-    ${SubCategoryFields.ekranebati} $textType, 
-    ${SubCategoryFields.ekranformati} $textType,
-    ${SubCategoryFields.piksel} $textType,
-       ${SubCategoryFields.garanti} $textType,
-
-)
-''');
+    await db.execute("CREATE TABLE dogs(id INTEGER PRIMARY KEY,title TEXT,image TEXT,brand TEXT,price INTEGER,description TEXT,ekranboyutu TEXT,garanti TEXT,hafiza TEXT,kamera TEXT, pil TEXT,ram TEXT, ekrankarti TEXT, islemci TEXT, piksel TEXT, cozunurluk TEXT, uydualici TEXT, ekranformati TEXT, ekranebati TEXT )");
   }
+  
 
   /* Future<Product> create(Product product) async {
     final db = await instance.database;
@@ -114,7 +57,7 @@ CREATE TABLE $tableTvs(
 
   Future<List<Product>> readAllProducts() async {
     final db = await instance.database;
-    final orderBy = '${ProductFields.categoryId} ASC';
+    final orderBy = 'id ASC';
     final result = await db?.query(tableProducts, orderBy: orderBy);
     return result!.map((json) => Product.fromJson(json)).toList();
   }
@@ -137,4 +80,4 @@ CREATE TABLE $tableTvs(
 
     db?.close();
   }
-}
+}*/
