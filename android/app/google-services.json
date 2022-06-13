@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "467217907727",
+    "firebase_url": "https://kutay-s-app1-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "kutay-s-app1",
+    "storage_bucket": "kutay-s-app1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467217907727:android:1c7e609e2b23222337a37a",
+        "android_client_info": {
+          "package_name": "com.example.app1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "467217907727-ac37dv68j2b8rilb2se7v7da8mlil4rr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0rnYoeL9DdP50355X94CnDDQK41c81jY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "467217907727-ac37dv68j2b8rilb2se7v7da8mlil4rr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

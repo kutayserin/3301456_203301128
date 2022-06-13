@@ -1,9 +1,0 @@
-const String? samsungphone = "assets/images/samsungphone.jpg";
-const String? iphone = "assets/images/iphone.jpg";
-const String? redmi = "assets/images/redmi.jpg";
-const String? lenovo = "assets/images/lenovo1.jpg";
-const String? msi = "assets/images/msi1.jpg";
-const String? casper = "assets/images/casper1.jpg";
-const String? samsungtv = "assets/images/samsungtv.jpg";
-const String? lgtv = "assets/images/lgtv.jpg";
-const String? vesteltv = "assets/images/vesteltv.jpg";

@@ -1,138 +1,48 @@
 import 'package:app1/constants.dart';
-import 'package:app1/screens/home/components/home_screen.dart';
+import 'package:app1/services/auth/auth_methods.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:app1/generated_plugin_registrant.dart';
+import 'firebase_options.dart';
+import 'screens/login/login_screen.dart';
+import 'screens/signup/signup_screen.dart';
+import 'screens/welcome/welcome_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: LoginDemo(),
-    );
-  }
-}
-
-class LoginDemo extends StatefulWidget {
-  @override
-  _LoginDemoState createState() => _LoginDemoState();
-}
-
-class _LoginDemoState extends State<LoginDemo> {
-  String nameSur = '';
-  String password = '';
-
-  void control() {
-    final snackBar =
-        SnackBar(content: const Text('Hatalı kullanıcı adı ya da şifre'));
-
-    List<String> data = [
-      "admin",
-      "123",
-    ];
-    data.add(nameSur);
-    data.add(password);
-    if ((data[0] == nameSur) && (data[1] == password)) {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => HomeScreen()));
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(snackBar);
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    void _nameSurSave(String text) {
-      setState(() {
-        nameSur = text;
-      });
-    }
-
-    void _passwordSave(String text) {
-      setState(() {
-        password = text;
-      });
-    }
-
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-              bottomRight: Radius.circular(36),
-              bottomLeft: Radius.circular(36)),
-        ),
-        toolbarHeight: 100,
-        centerTitle: true,
-        backgroundColor: qPrimaryColor,
-        title: Text(
-          "Kutay's Tech",
-          style: TextStyle(fontSize: 40),
-        ),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            ClipRRect(
-              borderRadius: BorderRadius.circular(400),
-              child: Image.asset(
-                "assets/images/ktechlogo.jpg",
-                height: 247,
-                width: 300,
-              ),
-            ),
-            Padding(padding: const EdgeInsets.all(10)),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15),
-              child: TextField(
-                onChanged: (text) {
-                  _nameSurSave(text);
-                },
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Kullanıcı Adı',
-                    hintText: 'Kullanıcı adınızı giriniz'),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 15.0, right: 15.0, top: 15),
-              child: TextField(
-                onChanged: (text) {
-                  _passwordSave(text);
-                },
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Şifre',
-                    hintText: 'Şifrenizi giriniz'),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.all(30),
-              height: 50,
-              width: 250,
-              decoration: BoxDecoration(
-                  color: qPrimaryColor,
-                  borderRadius: BorderRadius.circular(20)),
-              child: TextButton(
-                onPressed: () {
-                  control();
-                },
-                child: Text(
-                  'Giriş Yap',
-                  style: TextStyle(color: Colors.white, fontSize: 25),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
+    return MultiProvider(
+        providers: [
+          Provider<FlutterFireAuthService>(
+            create: (_) => FlutterFireAuthService(FirebaseAuth.instance),
+          ),
+          StreamProvider(
+            create: (context) => context.read().authStateChanges,
+            initialData: null,
+          ),
+        ],
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: "Kutay's Tech",
+          theme: ThemeData(
+            primaryColor: qPrimaryColor,
+            scaffoldBackgroundColor: Colors.white,
+          ),
+          home: WelcomeScreen(),
+          routes: {
+            "home": (_) => WelcomeScreen(),
+            "signup": (_) => SignUpScreen(),
+            "login": (_) => LoginScreen(),
+          },
+        ));
   }
 }
