@@ -36,12 +36,6 @@ class ContactPage extends StatelessWidget {
           taglineColor: qBackGroundColor,
           textColor: qTextColor,
         ),
-        bottomNavigationBar: ContactUsBottomAppBar(
-          companyName: "Taha Kutay Serin",
-          textColor: Colors.white,
-          backgroundColor: qBackGroundColor,
-          email: 'tahakutays@gmail.com',
-        ),
       ),
     );
   }
