@@ -7,7 +7,6 @@ import 'package:get/get.dart';
 
 import '../controller/homePageController.dart';
 import '../models/ItemModel.dart';
-import '../widgets/CustomButton.dart';
 import '../widgets/DotWidget.dart';
 
 class ItemDetailPage extends StatefulWidget {
@@ -30,19 +29,6 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
     // TODO: implement initState
     super.initState();
     pageController = PageController(initialPage: 0);
-  }
-
-  Widget buildDot(int index, int num) {
-    return Padding(
-      padding: EdgeInsets.all(5.0),
-      child: Container(
-        height: 10.0,
-        width: 10.0,
-        decoration: BoxDecoration(
-            color: (num == index) ? Colors.black38 : Colors.grey[200],
-            shape: BoxShape.circle),
-      ),
-    );
   }
 
   @override
@@ -192,19 +178,6 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
                     ],
                   ),
                 ),
-                GetBuilder<HomePageController>(builder: (value) {
-                  return Container(
-                      height: 270.0,
-                      alignment: Alignment(1.0, 1.0),
-                      child: Padding(
-                        padding: EdgeInsets.only(right: 15.0),
-                        child: Column(
-                          verticalDirection: VerticalDirection.down,
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          mainAxisAlignment: MainAxisAlignment.end,
-                        ),
-                      ));
-                })
               ],
             ),
             Divider(
@@ -270,9 +243,12 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
               GetBuilder<HomePageController>(builder: (_) {
                 bool isAdded = controller.isAlreadyInCart(model.id);
                 if (isAdded) {
-                  return CustomButton(
-                    name: "SEPETTEN ÇIKAR",
-                    onTap: () async {
+                  return ElevatedButton(
+                    child: Text("SEPETTEN ÇIKAR"),
+                    style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(qPrimaryColor)),
+                    onPressed: () async {
                       try {
                         controller.removeFromCart(model.id);
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -284,13 +260,16 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
                     },
                   );
                 }
-                return CustomButton(
-                  name: "SEPETE EKLE",
-                  onTap: controller.isLoading
+                return ElevatedButton(
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(Colors.purple)),
+                  child: Text("SEPETE EKLE"),
+                  onPressed: controller.isLoading
                       ? null
                       : () async {
                           try {
-                            var result = await controller.addToCart(model);
+                            await controller.addToCart(model);
                             controller.getCardList();
                             ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                                 content:
