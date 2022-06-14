@@ -3,12 +3,19 @@ import 'package:contactus/contactus.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
+import 'HomePage.dart';
+
 class ContactPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(
+          title: Text("İletişim"),
+          backgroundColor: qPrimaryColor,
+        ),
+        drawer: NavigationDrawer(),
         backgroundColor: Colors.white,
         body: ContactUs(
           logo: AssetImage('assets/images/taha-kutay-serin.jpg'),

@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:app1/cart/models/ItemModel.dart';
+import 'package:app1/cart/pages/HomePage.dart';
 import 'package:app1/constants.dart';
 
 import 'package:flutter/material.dart';
@@ -35,6 +36,7 @@ class FilterListState extends State<FilterList> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
+        drawer: NavigationDrawer(),
         appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 0,

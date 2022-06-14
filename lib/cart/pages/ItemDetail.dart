@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:app1/cart/pages/HomePage.dart';
 import 'package:app1/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -121,21 +122,12 @@ class _ItemDetailPageState extends State<ItemDetailPage> {
 
     // TODO: implement build
     return Scaffold(
+      drawer: NavigationDrawer(),
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: (() {
-            Navigator.pop(context);
-          }),
-          icon: Icon(
-            Icons.arrow_back,
-          ),
-          color: qPrimaryColor,
-        ),
-        backgroundColor: Colors.white,
+        backgroundColor: qPrimaryColor,
         centerTitle: true,
         title: Text(
           "Kutay's Tech",
-          style: TextStyle(color: qPrimaryColor),
         ),
         elevation: 0.3,
         shadowColor: qPrimaryColor,

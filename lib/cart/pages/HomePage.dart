@@ -198,6 +198,19 @@ buildMenuItems(BuildContext context) => Container(
             color: qPrimaryColor,
           ),
           ListTile(
+            leading: Icon(Icons.search_outlined),
+            title: Text("Ürün Arama"),
+            onTap: () {
+              Navigator.pop(context);
+
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: ((context) => FilterList())));
+            },
+          ),
+          Divider(
+            color: qPrimaryColor,
+          ),
+          ListTile(
             leading: Icon(Icons.shopping_cart_outlined),
             title: Text("Sepetim"),
             onTap: () {
