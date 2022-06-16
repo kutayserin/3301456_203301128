@@ -8,15 +8,10 @@ class ItemServices {
   StorageService storageService = StorageService();
   List<ProductModel> shoppingList = [];
 
-  late final Future<ProductModel> futureAlbum;
-
   @override
   List<ProductModel> getShoppingItems() {
-    //int count = 1;
     data.forEach((element) {
-      //element['id'] = count;
       shoppingList.add(ProductModel.fromJson(element));
-      //count++;
     });
     return shoppingList;
   }
@@ -65,7 +60,7 @@ class ItemServices {
     return await sqlService.getCartList();
   }
 
-  removeFromCart(int shopId) async {
+  Future removeFromCart(int shopId) async {
     return await sqlService.removeFromCart(shopId);
   }
 
